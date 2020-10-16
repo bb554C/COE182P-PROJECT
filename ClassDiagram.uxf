@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>32</x>
+      <y>104</y>
+      <w>248</w>
+      <h>296</h>
+    </coordinates>
+    <panel_attributes>User
+--
+- userID: Integer
+- userName: String
+- firstName: String
+- lastName: String
+- position: String
+- contactNumber: Integer
+- password: String
+- address: String
+- accountStatus: Boolean
+- gender: Integer
+- userType: Integer
+--
++ checkUserNameValidity(string) : return bool
++ getUserID(string) : return integer
++ getUserType(int) : return integer
++ updateContactNumber(int)
++ updatePassword(string)
++ updateAccountStatus(Boolean)
++ validateLogin(string, string) : return bool
++ insertNewUser(var list)
++ getUserList(var list) : return list</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>304</x>
+      <y>104</y>
+      <w>208</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>Patient
+--
+- patientID: Integer
+- firstName: String
+- lastName: String
+- gender: Integer
+- contactNumber: Integer
+- birthday: Integer
+- longitude: decimal
+- latitude: decimal
+- patientStatus: String
+- medicalNotes: String
+--
++ updateContactNumber(int)
++ updatePatientStatus(string)
+
++ insertNewPatient(var list)
++ getCoordinatesList()
++ getCoordinatesListByActive()
++ getCoordinatesListByRecovered()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>32</x>
+      <y>432</y>
+      <w>248</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Encryption
+--
+- password: string
+--
++ convertToSHA256(string) : return string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>352</x>
+      <y>376</y>
+      <w>168</w>
+      <h>248</h>
+    </coordinates>
+    <panel_attributes>DisplayMap
+--
+- longitude: decimal
+- latitude: decimal
+- activeCases: Integer
+- recoveredCases: Integer
+--
++ populateMapByActive()
++ populateMapByTotal()
++ populateMapByRecovered()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
