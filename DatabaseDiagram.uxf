@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>200</y>
+      <w>290</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>UserTable
+--
+- userID: int NOT NULL PRIMARY KEY
+- userName: string NOT NULL
+- firstName: string NOT NULL
+- lastName: string NOT NULL
+- contactNumber: int NOT NULL
+- password: string NOT NULL
+- address: string
+- accountStatus: bool DEFAULT 1
+- genderID: int NOT NULL FOREIGN KEY
+- userTypeID: int NOT NULL FOREIGN KEY</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>200</y>
+      <w>290</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>GenderTable
+--
+- genderID: int NOT NULL PRIMARY KEY
+- genderName: string NOT NULL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>230</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>320</y>
+      <w>290</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>UserTypeTable
+--
+- userTypeID: int NOT NULL PRIMARY KEY
+- userTypeName: string NOT NULL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>310</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>200</y>
+      <w>310</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>PatientTable
+--
+- patientID: int NOT NULL PRIMARY KEY
+- firstName: string NOT NULL
+- lastName: string NOT NULL
+- genderID: int NOT NULL FOREIGN KEY
+- contactNumber: int NOT NULL
+- birthday: int NOT NULL
+- longitude: decimal NOT NULL
+- latitude: decimal NOT NULL
+- patientStatusID: int NOT NULL FOREIGN KEY
+- medicalNotes: long string NULL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>230</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>440</y>
+      <w>310</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>PatientTable
+--
+- patientStatusID: int NOT NULL PRIMARY KEY
+- patientStatusName: string NOT NULL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>950</x>
+      <y>430</y>
+      <w>30</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>950</x>
+      <y>380</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
